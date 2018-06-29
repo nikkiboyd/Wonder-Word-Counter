@@ -18,13 +18,24 @@ namespace WordCounterTests
         }
 
         [TestMethod]
-        public void SplitSentence_SplitWordsToList_IndividualWords()
+        public void SplitWord_SplitMainWordToCharArray_WordLetters()
+        {
+            string userWord = "cat";
+            string userSentence = "the cat";
+            char[] splitWordLetters = new char[] { 'c', 'a', 't' };
+            RepeatCounter newCounter = new RepeatCounter("cat", userSentence);
+            char[] result = newCounter.SplitWordToCheck(userWord);
+            CollectionAssert.AreEqual(splitWordLetters, result);
+        }
+
+        [TestMethod]
+        public void SplitSentence_SplitWordsToCharArray_SentenceLetters()
         {
             string userSentence = "the cat";
-            char[] splitLetters = new char[] { 't', 'h', 'e', ' ', 'c', 'a', 't' }; 
+            char[] splitSentenceLetters = new char[] { 't', 'h', 'e', ' ', 'c', 'a', 't' };
             RepeatCounter newCounter = new RepeatCounter("cat", userSentence);
             char[] result = newCounter.SplitSentence(userSentence);
-            CollectionAssert.AreEqual(splitLetters, result);
+            CollectionAssert.AreEqual(splitSentenceLetters, result);
         }
     }
 }

@@ -7,7 +7,7 @@ namespace WordCounter
     {
         private string _wordToCheck;
         private string _sentenceToCheck;
-        private List<string> _splitWords;
+        private char[] _splitWords;
 
         public RepeatCounter(string wordToCheck, string sentenceToCheck)
         {
@@ -20,16 +20,18 @@ namespace WordCounter
             return _wordToCheck;
         }
 
+        public char[] SplitWordToCheck(string wordToCheck)
+        {
+            string wordToSplit = wordToCheck;
+            char[] wordLetters = wordToSplit.ToCharArray();
+            return wordLetters;
+        }
+
         public char[] SplitSentence(string userSentence)
         {
             string sentence = userSentence;
-            char[] letters = sentence.ToCharArray();
-            return letters;
-
-            //for (int i = 0; i < letters.Length; i++)
-            //{
-            //    char letter = letters[i];
-            //}
+            char[] sentenceLetters = sentence.ToCharArray();
+            return sentenceLetters;
         }
     }
 }
