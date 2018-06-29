@@ -51,14 +51,14 @@ namespace WordCounter
             return userSentence;
         }
 
-        public int CountOccurrences(string userWord, string[] userSentence)
+        public int CountOccurrences(string userWord, string userSentence)
         {
-            string input = "Dot Net Perls website";
+            string input = ;
             //
             // Check each character in the string using for-loop.
             //
             int spaces1 = 0;
-            for (int i = 0; i < input.Length; i++)
+            for (int i = 0; i < userSentence.Length; i++)
             {
                 if (input[i] == ' ')
                 {
