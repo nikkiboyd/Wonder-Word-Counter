@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace WordCounter
 {
@@ -32,6 +33,19 @@ namespace WordCounter
             string sentence = userSentence;
             char[] sentenceLetters = sentence.ToCharArray();
             return sentenceLetters;
+        }
+
+        public void CountOccurences(string userWord, string userSentence)
+        {
+            
+        string sentence = userSentence;
+        string wordToSearch = userWord;
+
+            string[] wordArray = userSentence.Split(new char[] { ' ', '.', ',', ';', ':', '?', '!', '-'}, StringSplitOptions.RemoveEmptyEntries);
+            var findMatches = from word in wordArray
+                              where word.ToLowerInvariant() == wordToSearch.ToLowerInvariant()
+                              select word;
+            int wordFrequency = findMatches.Count();  
         }
     }
 }
