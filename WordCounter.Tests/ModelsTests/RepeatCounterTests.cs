@@ -17,45 +17,57 @@ namespace WordCounterTests
             Assert.AreEqual(testWord, testSentence);
         }
 
-        [TestMethod]
-        public void SplitWord_SplitMainWordToCharArray_WordLetters()
-        {
-            string userWord = "cat";
-            string userSentence = "the cat";
-            char[] splitWordLetters = new char[] { 'c', 'a', 't' };
-            RepeatCounter newCounter = new RepeatCounter("cat", userSentence);
-            char[] result = newCounter.SplitWordToCheck(userWord);
-            CollectionAssert.AreEqual(splitWordLetters, result);
-        }
+        //[TestMethod]
+        //public void SplitWord_SplitMainWordToCharArray_WordLetters()
+        //{
+        //    string userWord = "cat";
+        //    string userSentence = "the cat";
+        //    char[] splitWordLetters = new char[] { 'c', 'a', 't' };
+        //    RepeatCounter newCounter = new RepeatCounter("cat", userSentence);
+        //    char[] result = newCounter.SplitWordToCheck(userWord);
+        //    CollectionAssert.AreEqual(splitWordLetters, result);
+        //}
 
         [TestMethod]
-        public void SplitSentence_SplitWordsToCharArray_SentenceLetters()
+        public void SentenceToWords_SplitWordsToCharArray_SentenceLetters()
         {
             string userSentence = "the cat";
-            char[] splitSentenceLetters = new char[] { 't', 'h', 'e', ' ', 'c', 'a', 't' };
+            string[] splitSentenceLetters = new string[] { "the", "cat" };
             RepeatCounter newCounter = new RepeatCounter("cat", userSentence);
-            char[] result = newCounter.SplitSentence(userSentence);
+            string[] result = newCounter.SentenceToWords(userSentence);
             CollectionAssert.AreEqual(splitSentenceLetters, result);
         }
-        [TestMethod]
-        public void CountOccurences_FindMatchesAndCount_Frequency()
-        {
-            string userWord = "cat";
-            string userSentence = "the cat is a cat";
-            int expectedFrequency = 2;
-            RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
-            int result = newCounter.CountOccurences(userWord, userSentence);
-            Assert.AreEqual(expectedFrequency, result);
-        }
-        [TestMethod]
-        public void CountOccurences_TestSentenceWithPunctuation_Frequency()
-        {
-            string userWord = "cat";
-            string userSentence = "What a beautiful cat!";
-            int expectedFrequency = 1;
-            RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
-            int result = newCounter.CountOccurences(userWord, userSentence);
-            Assert.AreEqual(expectedFrequency, result);
-        }
+
+
+        //[TestMethod]
+        //public void CountOccurences_FindMatchesAndCount_Frequency()
+        //{
+        //    string userWord = "cat";
+        //    string userSentence = "the cat is a cat";
+        //    int expectedFrequency = 2;
+        //    RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
+        //    int result = newCounter.CountOccurences(userWord, userSentence);
+        //    Assert.AreEqual(expectedFrequency, result);
+        //}
+        //[TestMethod]
+        //public void CountOccurences_TestSentenceWithPunctuation_Frequency()
+        //{
+        //    string userWord = "cat";
+        //    string userSentence = "What a beautiful cat!";
+        //    int expectedFrequency = 1;
+        //    RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
+        //    int result = newCounter.CountOccurences(userWord, userSentence);
+        //    Assert.AreEqual(expectedFrequency, result);
+        //}
+        //[TestMethod]
+        //public void CountOccurences_TestSentenceWithCapitalizationAndPluralization_Frequency()
+        //{
+        //    string userWord = "cat";
+        //    string userSentence = "What a beautiful Cat! Cats are my favorite animal.";
+        //    int expectedFrequency = 0;
+        //    RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
+        //    int result = newCounter.CountOccurences(userWord, userSentence);
+        //    Assert.AreEqual(expectedFrequency, result);
+        //}
     }
 }

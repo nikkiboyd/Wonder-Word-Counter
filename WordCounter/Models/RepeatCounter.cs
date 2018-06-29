@@ -21,32 +21,33 @@ namespace WordCounter
             return _wordToCheck;
         }
 
-        public char[] SplitWordToCheck(string wordToCheck)
-        {
-            string wordToSplit = wordToCheck;
-            char[] wordLetters = wordToSplit.ToCharArray();
-            return wordLetters;
-        }
+        //public char[] SplitWordToCheck(string wordToCheck)
+        //{
+        //    string wordToSplit = wordToCheck;
+        //    char[] wordLetters = wordToSplit.ToCharArray();
+        //    return wordLetters;
+        //}
 
-        public char[] SplitSentence(string userSentence)
+        public string[] SentenceToWords (string userSentence)
         {
             string sentence = userSentence;
-            char[] sentenceLetters = sentence.ToCharArray();
-            return sentenceLetters;
+            string[] sentenceWords = sentence.Split(' ');
+            return sentenceWords;
         }
 
-        public int CountOccurences(string userWord, string userSentence)
-        {
+        
+        //public int CountOccurences(string userWord, string userSentence)
+        //{
             
-        string sentence = userSentence;
-        string wordToSearch = userWord;
+        //string sentence = userSentence;
+        //string wordToSearch = userWord;
 
-            string[] wordArray = userSentence.Split(new char[] { ' ', '.', ',', ';', ':', '?', '!', '-'}, StringSplitOptions.RemoveEmptyEntries);
-            var findMatches = from word in wordArray
-                              where word.ToLowerInvariant() == wordToSearch.ToLowerInvariant()
-                              select word;
-            int wordFrequency = findMatches.Count();
-            return wordFrequency;
-        }
+        //    string[] wordArray = userSentence.Split(new char[] { ' ', '.', ',', ';', ':', '?', '!', '-'}, StringSplitOptions.RemoveEmptyEntries);
+        //    var findMatches = from word in wordArray
+        //                      where word.ToLowerInvariant() == wordToSearch.ToLowerInvariant()
+        //                      select word;
+        //    int wordFrequency = findMatches.Count();
+        //    return wordFrequency;
+        //}
     }
 }
