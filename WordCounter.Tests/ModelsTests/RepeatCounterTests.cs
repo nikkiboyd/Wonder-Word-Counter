@@ -63,43 +63,44 @@ namespace WordCounterTests
         public void CountOccurences_CountsFrequencyOfWord_Frequency()
         {
             string userSentence = "He's a cat";
-            string userWord = "catt";
+            string userWord = "cat";
             RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
             int result = newCounter.CountOccurrences(userWord, userSentence);
             Assert.AreEqual(1, result);
 
         }
-
-            //[TestMethod]
-            //public void CountOccurences_FindMatchesAndCount_Frequency()
-            //{
-            //    string userWord = "cat";
-            //    string userSentence = "the cat is a cat";
-            //    int expectedFrequency = 2;
-            //    RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
-            //    int result = newCounter.CountOccurences(userWord, userSentence);
-            //    Assert.AreEqual(expectedFrequency, result);
-            //}
-            //[TestMethod]
-            //public void CountOccurences_TestSentenceWithPunctuation_Frequency()
-            //{
-            //    string userWord = "cat";
-            //    string userSentence = "What a beautiful cat!";
-            //    int expectedFrequency = 1;
-            //    RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
-            //    int result = newCounter.CountOccurences(userWord, userSentence);
-            //    Assert.AreEqual(expectedFrequency, result);
-            //}
-            //[TestMethod]
-            //public void CountOccurences_TestSentenceWithCapitalizationAndPluralization_Frequency()
-            //{
-            //    string userWord = "cat";
-            //    string userSentence = "What a beautiful Cat! Cats are my favorite animal.";
-            //    int expectedFrequency = 0;
-            //    RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
-            //    int result = newCounter.CountOccurences(userWord, userSentence);
-            //    Assert.AreEqual(expectedFrequency, result);
-            //}
-        }
     }
 }
+
+
+
+        //[TestMethod]
+        //public void CountOccurences_FindMatchesAndCount_Frequency()
+        //{
+        //    string userWord = "cat";
+        //    string userSentence = "the cat is a cat";
+        //    int expectedFrequency = 2;
+        //    RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
+        //    int result = newCounter.CountOccurences(userWord, userSentence);
+        //    Assert.AreEqual(expectedFrequency, result);
+        //}
+        //[TestMethod]
+        //public void CountOccurences_TestSentenceWithPunctuation_Frequency()
+        //{
+        //    string userWord = "cat";
+        //    string userSentence = "What a beautiful cat!";
+        //    int expectedFrequency = 1;
+        //    RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
+        //    int result = newCounter.CountOccurences(userWord, userSentence);
+        //    Assert.AreEqual(expectedFrequency, result);
+        //}
+        //[TestMethod]
+        //public void CountOccurences_TestSentenceWithCapitalizationAndPluralization_Frequency()
+        //{
+        //    string userWord = "cat";
+        //    string userSentence = "What a beautiful Cat! Cats are my favorite animal.";
+        //    int expectedFrequency = 0;
+        //    RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
+        //    int result = newCounter.CountOccurences(userWord, userSentence);
+        //    Assert.AreEqual(expectedFrequency, result);
+        //}

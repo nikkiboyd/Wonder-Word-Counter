@@ -51,29 +51,20 @@ namespace WordCounter
             return userSentence;
         }
 
-        //public string CountOccurences(string userWord, string userSentences)
-        //{
-        //    string wordToCheck = userWord;
-        //    string sentenceToCheck = userSentences;
-        //    ReplacePunctuation(userSentences);
-        //    SentenceToWords(userSentences);
-
-        //    foreach (string wordToCheck in string sentenceToCheck)
-        //    {
-        //        return userWord;
-        //    }
-        //}
-
-        public int CountOccurrences(string userWord, string userSentence)
+        public int CountOccurrences(string userWord, string[] userSentence)
         {
-            int frequency = 0;
-            int i = 0;
-            while ((i = userWord.IndexOf(userSentence, i, StringComparison.CurrentCulture)) != -1)
+            string input = "Dot Net Perls website";
+            //
+            // Check each character in the string using for-loop.
+            //
+            int spaces1 = 0;
+            for (int i = 0; i < input.Length; i++)
             {
-                i += userSentence.Length;
-                frequency++;
+                if (input[i] == ' ')
+                {
+                    spaces1++;
+                }
             }
-            return frequency;
         }
     }
 }
