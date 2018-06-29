@@ -29,7 +29,7 @@ namespace WordCounterTests
         //}
 
         [TestMethod]
-        public void SentenceToWords_SplitWordsToCharArray_SentenceLetters()
+        public void SentenceToWords_SplitWordsToCharArray_SentenceWords()
         {
             string userSentence = "the cat";
             string[] splitSentenceLetters = new string[] { "the", "cat" };
@@ -38,6 +38,26 @@ namespace WordCounterTests
             CollectionAssert.AreEqual(splitSentenceLetters, result);
         }
 
+        [TestMethod]
+        public void SentenceToWords_SplitSentenceToWord_SentenceWords()
+        {
+            string userSentence = "He's a cat";
+            string[] splitSentenceLetters = new string[] { "He's", "a", "cat" };
+            RepeatCounter newCounter = new RepeatCounter("cat", userSentence);
+            string[] result = newCounter.SentenceToWords(userSentence);
+            CollectionAssert.AreEqual(splitSentenceLetters, result);
+        }
+
+        [TestMethod]
+        public void ReplacePunctuation_RemovesPunctuationFromSentence_NoPunctuation()
+        {
+            string userSentence = "He's a cat.";
+            string sentenceNoPunc = "He's a cat ";
+            RepeatCounter newCounter = new RepeatCounter("cat", userSentence);
+            string result = newCounter.ReplacePunctuation(userSentence);
+            Assert.AreEqual(sentenceNoPunc, result);
+
+        }
 
         //[TestMethod]
         //public void CountOccurences_FindMatchesAndCount_Frequency()

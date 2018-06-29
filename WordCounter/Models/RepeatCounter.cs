@@ -8,7 +8,6 @@ namespace WordCounter
     {
         private string _wordToCheck;
         private string _sentenceToCheck;
-        private char[] _splitWords;
 
         public RepeatCounter(string wordToCheck, string sentenceToCheck)
         {
@@ -28,13 +27,24 @@ namespace WordCounter
         //    return wordLetters;
         //}
 
+        //public char[] SplitWordToCheck(string wordToCheck)
+        //{
+        //    string wordToSplit = wordToCheck;
+        //    char[] wordLetters = wordToSplit.ToCharArray();
+        //    return wordLetters;
+        //}
+
         public string[] SentenceToWords (string userSentence)
         {
-            string sentence = userSentence;
-            string[] sentenceWords = sentence.Split(' ');
+            string[] sentenceWords = userSentence.Split(' ');
             return sentenceWords;
         }
 
+        public string ReplacePunctuation(string userSentence)
+        {
+            userSentence = userSentence.Replace('.', ' ');
+            return userSentence;
+        }
         
         //public int CountOccurences(string userWord, string userSentence)
         //{
