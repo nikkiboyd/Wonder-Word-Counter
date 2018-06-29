@@ -35,7 +35,7 @@ namespace WordCounter
             return sentenceLetters;
         }
 
-        public void CountOccurences(string userWord, string userSentence)
+        public int CountOccurences(string userWord, string userSentence)
         {
             
         string sentence = userSentence;
@@ -45,7 +45,8 @@ namespace WordCounter
             var findMatches = from word in wordArray
                               where word.ToLowerInvariant() == wordToSearch.ToLowerInvariant()
                               select word;
-            int wordFrequency = findMatches.Count();  
+            int wordFrequency = findMatches.Count();
+            return wordFrequency;
         }
     }
 }

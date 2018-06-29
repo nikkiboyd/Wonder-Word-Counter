@@ -37,5 +37,15 @@ namespace WordCounterTests
             char[] result = newCounter.SplitSentence(userSentence);
             CollectionAssert.AreEqual(splitSentenceLetters, result);
         }
+        [TestMethod]
+        public void CountOccurences_FindMatchesAndCount_Frequency()
+        {
+            string userWord = "cat";
+            string userSentence = "the cat is a cat";
+            int expectedFrequency = 2;
+            RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
+            int result = newCounter.CountOccurences(userWord, userSentence);
+            Assert.AreEqual(expectedFrequency, result);
+        }
     }
 }
