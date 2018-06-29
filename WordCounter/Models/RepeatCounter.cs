@@ -8,6 +8,7 @@ namespace WordCounter
     {
         private string _wordToCheck;
         private string _sentenceToCheck;
+        private int _frequency;
 
         public RepeatCounter(string wordToCheck, string sentenceToCheck)
         {
@@ -18,6 +19,31 @@ namespace WordCounter
         public string GetWordToCheck()
         {
             return _wordToCheck;
+        }
+
+        public void SetWordToCheck(string userWord)
+        {
+            _wordToCheck = userWord;
+        }
+
+        public string GetSentenceToCheck()
+        {
+            return _sentenceToCheck;
+        }
+
+        public void SetSentenceToCheck(string userSentence)
+        {
+            _sentenceToCheck = userSentence;
+        }
+
+        public int GetFrequency()
+        {
+            return _frequency;
+        }
+
+        public void SetFrequency(int wordOccurences)
+        {
+            _frequency = wordOccurences;
         }
 
         //public char[] SplitWordToCheck(string wordToCheck)
@@ -49,22 +75,6 @@ namespace WordCounter
             userSentence = userSentence.Replace('?', ' ');
             userSentence = userSentence.Replace(':', ' ');
             return userSentence;
-        }
-
-        public int CountOccurrences(string userWord, string userSentence)
-        {
-            string input = ;
-            //
-            // Check each character in the string using for-loop.
-            //
-            int spaces1 = 0;
-            for (int i = 0; i < userSentence.Length; i++)
-            {
-                if (input[i] == ' ')
-                {
-                    spaces1++;
-                }
-            }
         }
     }
 }
