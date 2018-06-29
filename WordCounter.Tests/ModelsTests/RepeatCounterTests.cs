@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using System;
 using WordCounter;
 
-namespace WordCounter.Test
+namespace WordCounterTests
 {
     [TestClass]
-    public class RepeatCounterTest
+    public class RepeatCounterTests
     {
         [TestMethod]
-        public void GetWordToCheck_ReturnsWordFromUserToRepeatCounter_UserInputString()
+        public void StringToArray_StringBreaksIntoArray_CharArray()
         {
-            string wordToCheck = "cat";
-            List<string> sentenceToCheck = new List<string> { "false" };
-            RepeatCounter newRepeatCounter = new RepeatCounter(wordToCheck, sentenceToCheck);
-            string result = newRepeatCounter.GetWordToCheck();
-            Assert.AreEqual(wordToCheck, result);
+            string testWord = "cat";
+            string testSentence = "cat";
+            RepeatCounter newCounter = new RepeatCounter("cat", "cat");
+            Assert.AreEqual(testWord, testSentence);
         }
     }
 }

@@ -6,10 +6,9 @@ namespace WordCounter
     public class RepeatCounter
     {
         private string _wordToCheck;
-        private List<string> _sentenceToCheck;
-        private List<string> _verifiedMatches;
+        private string _sentenceToCheck;
 
-        public RepeatCounter(string wordToCheck, List<string> sentenceToCheck)
+        public RepeatCounter(string wordToCheck, string sentenceToCheck)
         {
             _wordToCheck = wordToCheck;
             _sentenceToCheck = sentenceToCheck;
