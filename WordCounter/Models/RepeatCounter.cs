@@ -14,6 +14,7 @@ namespace WordCounter
         {
             _wordToCheck = wordToCheck;
             _sentenceToCheck = sentenceToCheck;
+            _frequency = 0;
         }
 
         public string GetWordToCheck()

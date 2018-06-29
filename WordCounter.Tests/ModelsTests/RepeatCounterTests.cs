@@ -8,6 +8,15 @@ namespace WordCounterTests
     [TestClass]
     public class RepeatCounterTests
     {
+        [TestMethod]
+        public void GetWordToCheck_ObtainWordForCounting_Word()
+        {
+            string testWord = "cat";
+            string testSentence = "cat";
+            RepeatCounter newCounter = new RepeatCounter(testWord, testSentence);
+            int result = newCounter.GetFrequency();
+            Assert.AreEqual(0, newCounter.GetFrequency());
+        }
 
         [TestMethod]
         public void RepeatCounter_WordAndSentenceMatch_WordsMatch()
@@ -49,15 +58,15 @@ namespace WordCounterTests
         }
 
 
-        [TestMethod]
-        public void CountOccurences_CountsFrequencyOfWord_Frequency()
-        {
-            string userSentence = "He's a cat";
-            string userWord = "cat";
-            RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
-            int result = newCounter.CountOccurrences(userWord, userSentence);
-            Assert.AreEqual(1, result);
+        //[TestMethod]
+        //public void CountOccurences_CountsFrequencyOfWord_Frequency()
+        //{
+        //    string userSentence = "He's a cat";
+        //    string userWord = "cat";
+        //    RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
+        //    int result = newCounter.CountOccurrences(userWord, userSentence);
+        //    Assert.AreEqual(1, result);
 
-        }
+        //}
     }
 }
