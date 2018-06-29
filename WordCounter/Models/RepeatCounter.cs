@@ -46,20 +46,6 @@ namespace WordCounter
             _frequency = wordOccurences;
         }
 
-        //public char[] SplitWordToCheck(string wordToCheck)
-        //{
-        //    string wordToSplit = wordToCheck;
-        //    char[] wordLetters = wordToSplit.ToCharArray();
-        //    return wordLetters;
-        //}
-
-        //public char[] SplitWordToCheck(string wordToCheck)
-        //{
-        //    string wordToSplit = wordToCheck;
-        //    char[] wordLetters = wordToSplit.ToCharArray();
-        //    return wordLetters;
-        //}
-
         public string[] SentenceToWords(string userSentence)
         {
             string[] sentenceWords = userSentence.Split(' ');
@@ -78,17 +64,4 @@ namespace WordCounter
         }
     }
 }
-        //public int CountOccurences(string userWord, string userSentence)
-        //{
-            
-        //string sentence = userSentence;
-        //string wordToSearch = userWord;
-
-        //    string[] wordArray = userSentence.Split(new char[] { ' ', '.', ',', ';', ':', '?', '!', '-'}, StringSplitOptions.RemoveEmptyEntries);
-        //    var findMatches = from word in wordArray
-        //                      where word.ToLowerInvariant() == wordToSearch.ToLowerInvariant()
-        //                      select word;
-        //    int wordFrequency = findMatches.Count();
-        //    return wordFrequency;
-        //}
 
