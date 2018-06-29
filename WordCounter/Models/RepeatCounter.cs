@@ -43,6 +43,11 @@ namespace WordCounter
         public string ReplacePunctuation(string userSentence)
         {
             userSentence = userSentence.Replace('.', ' ');
+            userSentence = userSentence.Replace(',', ' ');
+            userSentence = userSentence.Replace(';', ' ');
+            userSentence = userSentence.Replace('!', ' ');
+            userSentence = userSentence.Replace('?', ' ');
+            userSentence = userSentence.Replace(':', ' ');
             return userSentence;
         }
         

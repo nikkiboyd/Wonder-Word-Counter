@@ -51,13 +51,14 @@ namespace WordCounterTests
         [TestMethod]
         public void ReplacePunctuation_RemovesPunctuationFromSentence_NoPunctuation()
         {
-            string userSentence = "He's a cat.";
+            string userSentence = "He's a cat!";
             string sentenceNoPunc = "He's a cat ";
             RepeatCounter newCounter = new RepeatCounter("cat", userSentence);
             string result = newCounter.ReplacePunctuation(userSentence);
             Assert.AreEqual(sentenceNoPunc, result);
-
         }
+
+
 
         //[TestMethod]
         //public void CountOccurences_FindMatchesAndCount_Frequency()
