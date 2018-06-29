@@ -34,7 +34,7 @@ namespace WordCounter
         //    return wordLetters;
         //}
 
-        public string[] SentenceToWords (string userSentence)
+        public string[] SentenceToWords(string userSentence)
         {
             string[] sentenceWords = userSentence.Split(' ');
             return sentenceWords;
@@ -50,7 +50,33 @@ namespace WordCounter
             userSentence = userSentence.Replace(':', ' ');
             return userSentence;
         }
-        
+
+        //public string CountOccurences(string userWord, string userSentences)
+        //{
+        //    string wordToCheck = userWord;
+        //    string sentenceToCheck = userSentences;
+        //    ReplacePunctuation(userSentences);
+        //    SentenceToWords(userSentences);
+
+        //    foreach (string wordToCheck in string sentenceToCheck)
+        //    {
+        //        return userWord;
+        //    }
+        //}
+
+        public int CountOccurrences(string userWord, string userSentence)
+        {
+            int frequency = 0;
+            int i = 0;
+            while ((i = userWord.IndexOf(userSentence, i, StringComparison.CurrentCulture)) != -1)
+            {
+                i += userSentence.Length;
+                frequency++;
+            }
+            return frequency;
+        }
+    }
+}
         //public int CountOccurences(string userWord, string userSentence)
         //{
             
@@ -64,5 +90,4 @@ namespace WordCounter
         //    int wordFrequency = findMatches.Count();
         //    return wordFrequency;
         //}
-    }
-}
+
