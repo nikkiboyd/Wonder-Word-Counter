@@ -47,5 +47,15 @@ namespace WordCounterTests
             int result = newCounter.CountOccurences(userWord, userSentence);
             Assert.AreEqual(expectedFrequency, result);
         }
+        [TestMethod]
+        public void CountOccurences_TestSentenceWithPunctuation_Frequency()
+        {
+            string userWord = "cat";
+            string userSentence = "What a beautiful cat!";
+            int expectedFrequency = 1;
+            RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
+            int result = newCounter.CountOccurences(userWord, userSentence);
+            Assert.AreEqual(expectedFrequency, result);
+        }
     }
 }
