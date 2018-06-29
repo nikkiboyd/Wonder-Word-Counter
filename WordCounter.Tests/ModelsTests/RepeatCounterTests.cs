@@ -20,11 +20,11 @@ namespace WordCounterTests
         [TestMethod]
         public void SplitSentence_SplitWordsToList_IndividualWords()
         {
-            string userSentence = "The cat is happy";
-            List<string> splitSentence = new List<string> { "The", "cat", "is", "happy" }; 
+            string userSentence = "the cat";
+            char[] splitLetters = new char[] { 't', 'h', 'e', ' ', 'c', 'a', 't' }; 
             RepeatCounter newCounter = new RepeatCounter("cat", userSentence);
-            List<string> result = newCounter.SplitSentence(userSentence);
-            CollectionAssert.AreEqual(splitSentence, result);
+            char[] result = newCounter.SplitSentence(userSentence);
+            CollectionAssert.AreEqual(splitLetters, result);
         }
     }
 }

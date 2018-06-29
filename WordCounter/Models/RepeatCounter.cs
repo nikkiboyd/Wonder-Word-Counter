@@ -13,7 +13,6 @@ namespace WordCounter
         {
             _wordToCheck = wordToCheck;
             _sentenceToCheck = sentenceToCheck;
-            _splitWords = splitWords;
         }
 
         public string GetWordToCheck()
@@ -21,14 +20,16 @@ namespace WordCounter
             return _wordToCheck;
         }
 
-        public void SplitSentence(string userSentence)
+        public char[] SplitSentence(string userSentence)
         {
             string sentence = userSentence;
-            string[] words = sentence.Split(' ');
-            foreach (string word in words)
-            {
-                _splitWords.Add(word);
-            }
+            char[] letters = sentence.ToCharArray();
+            return letters;
+
+            //for (int i = 0; i < letters.Length; i++)
+            //{
+            //    char letter = letters[i];
+            //}
         }
     }
 }
