@@ -12,11 +12,14 @@ namespace WordCounterTests
         public void GetWordToCheck_ObtainWordForCounting_Word()
         {
             string testWord = "cat";
-            string testSentence = "cat";
+            string testSentence = "the cat is happy";
             RepeatCounter newCounter = new RepeatCounter(testWord, testSentence);
             int result = newCounter.GetFrequency();
             Assert.AreEqual(0, newCounter.GetFrequency());
         }
+
+        [TestMethod]
+
 
         [TestMethod]
         public void RepeatCounter_WordAndSentenceMatch_WordsMatch()
@@ -56,7 +59,6 @@ namespace WordCounterTests
             string result = newCounter.ReplacePunctuation(userSentence);
             Assert.AreEqual(sentenceNoPunc, result);
         }
-
 
         //[TestMethod]
         //public void CountOccurences_CountsFrequencyOfWord_Frequency()
