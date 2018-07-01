@@ -6,55 +6,18 @@ namespace WordCounter
 {
     public class RepeatCounter
     {
-        private string _wordToCheck;
-        private string _sentenceToCheck;
-        private int _frequency;
+        private string _userWord;
+        private string _userSentence;
 
-        public RepeatCounter(string wordToCheck, string sentenceToCheck)
+        public RepeatCounter(string userWord, string userSentence)
         {
-            _wordToCheck = wordToCheck;
-            _sentenceToCheck = sentenceToCheck;
-            _frequency = 0;
+            _userWord = userWord;
+            _userSentence = userSentence;
         }
 
-        public string GetWordToCheck()
+        public string PrepareSentence(string userSentence)
         {
-            return _wordToCheck;
-        }
-
-        public void SetWordToCheck(string userWord)
-        {
-            _wordToCheck = userWord;
-        }
-
-        public string GetSentenceToCheck()
-        {
-            return _sentenceToCheck;
-        }
-
-        public void SetSentenceToCheck(string userSentence)
-        {
-            _sentenceToCheck = userSentence;
-        }
-
-        public int GetFrequency()
-        {
-            return _frequency;
-        }
-
-        public void SetFrequency(int wordOccurences)
-        {
-            _frequency = wordOccurences;
-        }
-
-        public string[] SentenceToWords(string userSentence)
-        {
-            string[] sentenceWords = userSentence.Split(' ');
-            return sentenceWords;
-        }
-
-        public string ReplacePunctuation(string userSentence)
-        {
+            userSentence = userSentence.ToLower();
             userSentence = userSentence.Replace('.', ' ');
             userSentence = userSentence.Replace(',', ' ');
             userSentence = userSentence.Replace(';', ' ');
@@ -63,6 +26,27 @@ namespace WordCounter
             userSentence = userSentence.Replace(':', ' ');
             return userSentence;
         }
+
+        public int TotalOccurrences(List<int> listOfOccurrences)
+        {
+            int totalOccurrences = listOfOccurrences.Count();
+            return totalOccurrences;
+        }
+
+        public int CountOccurrences(string userWord, string userSentence)
+        {
+            List<int> listOfOccurrences = new List<int>();
+            userSentence = PrepareSentence(userSentence);
+            string[] sentenceToSearch = userSentence.Split();
+
+            foreach (string word in sentenceToSearch)
+            {
+                if (word == userWord)
+                {
+                    listOfOccurrences.Add(1);
+                }
+            }
+            return TotalOccurrences(listOfOccurrences);
+        }
     }
 }
-
