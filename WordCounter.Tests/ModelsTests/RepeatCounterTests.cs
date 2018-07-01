@@ -19,25 +19,12 @@ namespace WordCounterTests
         }
 
         [TestMethod]
-
-
-        [TestMethod]
         public void RepeatCounter_WordAndSentenceMatch_WordsMatch()
         {
             string testWord = "cat";
             string testSentence = "cat";
             RepeatCounter newCounter = new RepeatCounter("cat", "cat");
             Assert.AreEqual(testWord, testSentence);
-        }
-
-        [TestMethod]
-        public void SentenceToWords_SplitWordsToCharArray_SentenceWords()
-        {
-            string userSentence = "the cat";
-            string[] splitSentenceLetters = new string[] { "the", "cat" };
-            RepeatCounter newCounter = new RepeatCounter("cat", userSentence);
-            string[] result = newCounter.SentenceToWords(userSentence);
-            CollectionAssert.AreEqual(splitSentenceLetters, result);
         }
 
         [TestMethod]
@@ -59,16 +46,5 @@ namespace WordCounterTests
             string result = newCounter.ReplacePunctuation(userSentence);
             Assert.AreEqual(sentenceNoPunc, result);
         }
-
-        //[TestMethod]
-        //public void CountOccurences_CountsFrequencyOfWord_Frequency()
-        //{
-        //    string userSentence = "He's a cat";
-        //    string userWord = "cat";
-        //    RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
-        //    int result = newCounter.CountOccurrences(userWord, userSentence);
-        //    Assert.AreEqual(1, result);
-
-        //}
     }
 }
