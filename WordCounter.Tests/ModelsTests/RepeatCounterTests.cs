@@ -47,17 +47,17 @@ namespace WordCounterTests
             Assert.AreEqual(sentenceNoPunc, result);
         }
 
-        [TestMethod]
-        public void PrepareWord_PrepareWordForSearch_SplitWord()
-        {
-            string userSentence = "He's a cat";
-            string userWord = "cat";
-            string preparedWord = " cat ";
-            Console.WriteLine(preparedWord);
-            RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
-            string result = newCounter.PrepareWord(userWord);
-            Assert.AreEqual(preparedWord, result);
-        }
+        //[TestMethod]
+        //public void PrepareWord_PrepareWordForSearch_SplitWord()
+        //{
+        //    string userSentence = "He's a cat";
+        //    string userWord = "cat";
+        //    string preparedWord = " cat ";
+        //    Console.WriteLine(preparedWord);
+        //    RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
+        //    string result = newCounter.PrepareWord(userWord);
+        //    Assert.AreEqual(preparedWord, result);
+        //}
 
         [TestMethod]
         public void TotalOccurrences_CountsTotalWordOccurrences_NumberOfTimes()
@@ -74,9 +74,9 @@ namespace WordCounterTests
         [TestMethod]
         public void CountOccurences_CountsEachWordOccurrences_IntFinalAnswer()
         {
-            string userSentence = "cat cat cat dog dog dog";
+            string userSentence = "My CaT is named Gary. He's such a cute cat! Do you have any cats?";
             string userWord = "cat";
-            int totalOccurences = 3;
+            int totalOccurences = 2;
             RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
             int result = newCounter.CountOccurrences(userWord, userSentence);
             Assert.AreEqual(totalOccurences, result);
