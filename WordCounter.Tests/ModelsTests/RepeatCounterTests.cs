@@ -38,12 +38,12 @@ namespace WordCounterTests
         //}
 
         [TestMethod]
-        public void ReplacePunctuation_RemovesPunctuationFromSentence_NoPunctuation()
+        public void PrepareSentence_RemovesPunctuationFromSentence_NoPunctuation()
         {
-            string userSentence = "He's a cat!";
-            string sentenceNoPunc = "He's a cat ";
+            string userSentence = "He's a CAT!";
+            string sentenceNoPunc = "he's a cat ";
             RepeatCounter newCounter = new RepeatCounter("cat", userSentence);
-            string result = newCounter.ReplacePunctuation(userSentence);
+            string result = newCounter.PrepareSentence(userSentence);
             Assert.AreEqual(sentenceNoPunc, result);
         }
 
