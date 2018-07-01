@@ -74,9 +74,9 @@ namespace WordCounterTests
         [TestMethod]
         public void CountOccurences_CountsEachWordOccurrences_IntFinalAnswer()
         {
-            string userSentence = "cat";
+            string userSentence = "cat cat cat dog dog dog";
             string userWord = "cat";
-            int totalOccurences = 1;
+            int totalOccurences = 3;
             RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
             int result = newCounter.CountOccurrences(userWord, userSentence);
             Assert.AreEqual(totalOccurences, result);
