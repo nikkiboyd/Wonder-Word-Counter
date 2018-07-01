@@ -60,7 +60,7 @@ namespace WordCounterTests
         }
 
         [TestMethod]
-        public void TotalOccurrences_CountsWordOccurrences_NumberOfTimes()
+        public void TotalOccurrences_CountsTotalWordOccurrences_NumberOfTimes()
         {
             string userSentence = "cat cat cat";
             string userWord = "cat";
@@ -68,6 +68,17 @@ namespace WordCounterTests
             int totalOccurences = 3;
             RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
             int result = newCounter.TotalOccurrences(listOfOccurrences);
+            Assert.AreEqual(totalOccurences, result);
+        }
+
+        [TestMethod]
+        public void CountOccurences_CountsEachWordOccurrences_IntFinalAnswer()
+        {
+            string userSentence = "cat";
+            string userWord = "cat";
+            int totalOccurences = 1;
+            RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
+            int result = newCounter.CountOccurrences(userWord, userSentence);
             Assert.AreEqual(totalOccurences, result);
         }
     }
