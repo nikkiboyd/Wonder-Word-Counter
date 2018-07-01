@@ -59,15 +59,16 @@ namespace WordCounterTests
             Assert.AreEqual(preparedWord, result);
         }
 
-        //[TestMethod]
-        //public void CountOccurences_CountOccurencesOfWordInSentence_IntOfOcurrences()
-        //{
-        //    string userSentence = "He's a cat ";
-        //    string userWord = "cat";
-        //    int occurences = 1;
-        //    RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
-        //    string result = newCounter.CountOccurences(userWord, userSentence);
-        //    Assert.AreEqual(occurences, result);
-        //}
+        [TestMethod]
+        public void TotalOccurrences_CountsWordOccurrences_NumberOfTimes()
+        {
+            string userSentence = "cat cat cat";
+            string userWord = "cat";
+            List<int> listOfOccurrences = new List<int>{ 1, 1, 1 };
+            int totalOccurences = 3;
+            RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
+            int result = newCounter.TotalOccurrences(listOfOccurrences);
+            Assert.AreEqual(totalOccurences, result);
+        }
     }
 }
