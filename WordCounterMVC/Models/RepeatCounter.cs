@@ -13,13 +13,18 @@ namespace WordCounterMVC.Models
         {
             _wordToCheck = wordToCheck;
             _sentenceToCheck = sentenceToCheck;
-            _occurrences = 0;
+
         }
 
-        //public static int GetOccurrences()
-        //{
-        //    return _occurrences;
-        //}
+        public void SetOccurrences(int occurrences)
+        {
+            _occurrences = occurrences;
+        }
+
+        public int GetOccurrences()
+        {
+            return _occurrences;
+        }
 
         public int CountOccurrences(string userWord, string userSentence)
         {
@@ -28,8 +33,8 @@ namespace WordCounterMVC.Models
                               where word.ToLower() == userWord.ToLower()
                               select word;
             
-            _occurrences = findMatches.Count();
-            return _occurrences;
+            int wordFrequency = findMatches.Count();
+            return wordFrequency;
         }
     }
 }
