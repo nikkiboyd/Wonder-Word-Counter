@@ -49,5 +49,13 @@ namespace WordCounterMVC.Tests.ControllerTests
             ActionResult infoView = controller.Info();
             Assert.IsInstanceOfType(infoView, typeof(ViewResult));
         }
+
+        [TestMethod]
+        public void Info_HasCorrectModelType_True()
+        {
+            ViewResult infoView = new WordCounterMVCController().Info() as ViewResult;
+            var result = infoView.ViewData.Model;
+            Assert.IsInstanceOfType(result, typeof(ViewResult));
+        }
     }
 }
