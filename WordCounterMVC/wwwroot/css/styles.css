@@ -1,16 +1,30 @@
-﻿
-body {
-    font-family: "Comic Sans MS", cursive, sans-serif
+﻿body {
+    background: url('/images/background.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: "Comic Sans MS", cursive, sans-seri;
+    font-style: italic;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: #5AB8EA;
 }
 
 h1 {
+    font-size: 100px;
     font-family: 'Bangers', cursive;
+    color: #FDF250;
 }
 
 .center {
     margin: auto;
     width: 100%;
     padding: 10px;
+    text-align: center;
+}
+
+.container {
+    margin-top: 20px;
 }
 
 .card {
@@ -33,4 +47,12 @@ h1 {
 
 .w {
     width: 30%;
+}
+
+.btn {
+    background-color: black;
+    font-size: 30px;
+    font-family: 'Bangers', cursive;
+    color: #FDF250;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
