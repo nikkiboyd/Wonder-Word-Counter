@@ -6,3 +6,17 @@ body {
 h1 {
     font-family: 'Cabin Sketch', cursive;
 }
+
+.center {
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+}
+
+.card {
+    background-color: white;
+    border-color: white;
+    border-style: none;
+    padding: 20px;
+    text-align: center;
+}
