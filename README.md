@@ -6,7 +6,17 @@
 
 ## Description
 
-_This program will assist users with counting the frequency of a single word throughout a given sentence or paragraph. The program has been built to account for case sensitivity, all forms of punctuation, pluralization, and an infinite amount of entries. Please stay tuned for the user interface portion of this program shortly!_
+Wonder Word is devoted to saving users from manually counting words! Simply enter the word to search in any given paragraph, and let the superhero take care of the rest.
+
+Our brave hero is NOT affected by:
+
+- Case sensitivity
+- All forms of punctuation
+- Pluralization
+- Special characters and numbers
+- Any amount of words per entry
+
+_...so just paste and GO!_
 
 ![](https://user-images.githubusercontent.com/38386782/42403771-73ca08de-8138-11e8-8a53-4aa878d8e18c.png)
 
