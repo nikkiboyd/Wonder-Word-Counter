@@ -13,12 +13,7 @@ namespace WordCounterMVC.Models
         {
             _wordToCheck = wordToCheck;
             _sentenceToCheck = sentenceToCheck;
-
-        }
-
-        public void SetOccurrences(int occurrences)
-        {
-            _occurrences = occurrences;
+            _occurrences = 100;
         }
 
         public int GetOccurrences()

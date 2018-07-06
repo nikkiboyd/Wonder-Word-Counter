@@ -21,13 +21,12 @@ namespace WordCounterMVC.Controllers
             return View();
         }
 
-
         [HttpPost("/word-counter/result")]
-        public ActionResult Result(string userWord, string userSentence)
+        public ActionResult ShowResult()
         {
-            RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
-            newCounter.CountOccurrences(userWord, userSentence);
-            return View(newCounter.CountOccurrences(userWord, userSentence));
+            RepeatCounter newCounter = new RepeatCounter(userWord, userInput);
+            newCounter.CountOccurrences(userWord, userInput);
+            return View("Result", newCounter);
         }
     }
 }
