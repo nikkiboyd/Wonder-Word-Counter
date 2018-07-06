@@ -28,5 +28,11 @@ namespace WordCounterMVC.Controllers
             int occurrences = newCounter.CountOccurrences();
             return View("Result", newCounter);
         }
+
+        [HttpGet("/info")]
+        public ActionResult Info()
+        {
+            return View();
+        }
     }
 }
