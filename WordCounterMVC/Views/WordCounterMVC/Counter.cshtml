@@ -5,10 +5,14 @@
 }
 
 <h1>Word Counter</h1>
-<form action="/word-counter/result">
+<form action="/word-counter/result" method="post">
     <div class="form-group">
-        <label for="text-box">Enter a sentence or paragraph to check!</label>
-        <textarea class="form-control" id="text-box" rows="3"></textarea>
-        <button class="btn btn-info" type="submit" name="button">Count Words</button>
+        <label for="userWord">Example label</label>
+        <input type="text" class="form-control" id="userWord" placeholder="Word to count" name="userWord">
     </div>
+    <div class="form-group">
+        <label for="userSentence">Another label</label>
+        <input type="text" class="form-control" id="userSentence" placeholder="Sentence to check" name="userSentence">
+    </div>
+    <button type="submit" name="button">Count my words!</button>
 </form>

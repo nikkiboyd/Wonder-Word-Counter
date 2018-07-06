@@ -7,6 +7,7 @@ namespace WordCounterMVC.Models
     {
         private string _wordToCheck;
         private string _sentenceToCheck;
+        private int _occurrences;
 
         public RepeatCounter(string wordToCheck, string sentenceToCheck)
         {
@@ -14,7 +15,7 @@ namespace WordCounterMVC.Models
             _sentenceToCheck = sentenceToCheck;
         }
 
-        public int CountOccurences(string userWord, string userSentence)
+        public int CountOccurrences(string userWord, string userSentence)
         {
             string[] wordArray = userSentence.Split(new char[] { ' ', '.', ',', ';', ':', '?', '!'});
             var findMatches = from word in wordArray
