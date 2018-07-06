@@ -3,16 +3,16 @@
 *@
 @{
 }
-
-<h1>Word Counter</h1>
-<form action="/word-counter/result" method="post">
-    <div class="form-group">
-        <label for="userWord">Example label</label>
-        <input type="text" class="form-control" id="userWord" placeholder="Word to count" name="userWord">
-    </div>
-    <div class="form-group">
-        <label for="userSentence">Another label</label>
-        <input type="text" class="form-control" id="userSentence" placeholder="Sentence to check" name="userSentence">
-    </div>
-    <button type="submit" name="button">Count my words!</button>
-</form>
+<div class="container center">
+    <img class="w center" src="/images/Wlogo.png" />
+    <h1>Word Counter</h1>
+    <form action="/word-counter/result" method="post">
+        <div class="form-group">
+            <input type="text" class="form-control center" id="userWord" placeholder="Word to count" name="userWord">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control center" id="userSentence" placeholder="Sentence to check" name="userSentence">
+        </div>
+        <button type="submit" name="button" class="btn">Count my words!</button>
+    </form>
+</div>

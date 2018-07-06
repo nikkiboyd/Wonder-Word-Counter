@@ -50,9 +50,15 @@ h1 {
 }
 
 .btn {
+    border-color: #F3C54A;
     background-color: black;
     font-size: 30px;
     font-family: 'Bangers', cursive;
-    color: #FDF250;
+    color: #F3C54A;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+input[type="text"] {
+    width: 200px;
+    background-color: #5AB8EA;
 }
