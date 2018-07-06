@@ -1,10 +1,10 @@
 ﻿body {
-    background: url('/images/background.png') no-repeat center center fixed;
+    background: url('/images/background.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    font-family: "Comic Sans MS", cursive, sans-seri;
+    font-family: 'Comfortaa', cursive;
     font-style: italic;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     color: #5AB8EA;
@@ -51,7 +51,7 @@ h1 {
 
 .btn {
     border-color: #F3C54A;
-    background-color: black;
+    background-color: #6192AC;
     font-size: 30px;
     font-family: 'Bangers', cursive;
     color: #F3C54A;
@@ -61,4 +61,30 @@ h1 {
 input[type="text"] {
     width: 200px;
     background-color: #5AB8EA;
+}
+
+.boom {
+    width: 40%
+}
+
+.number {
+    color: #EA3322;
+    font-size: 80px;
+    /*margin-top: -190px;*/
+
+    font-family: 'Bangers', cursive;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-container {
+    margin-top: -30px;
+    position: relative;
+    text-align: center;
+    color: white;
 }

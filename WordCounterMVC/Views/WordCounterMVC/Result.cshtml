@@ -4,12 +4,15 @@
 @{
 }
 
-<h1>The word "@Model.GetWord()" appears...</h1> 
+<div class="container center">
+    <img class="w center" src="/images/Wlogo.png" />
+    <h1>"@Model.GetWord()" APPEARS</h1>
+    <div class="image-container">
+        <img class="boom" src="/images/boom.png" />
+        <div class="centered number">@Model.CountOccurrences()x!</div>
+    </div>
 
-<img src="/images/burst.png" />
-
-<p class="number">@Model.CountOccurrences()</p>
-<br>
-<p>times!</p>
-
-<p><a href="/">Count another word!</a></p>
+    <form action="/">
+        <button type="submit" name="button" class="btn">Count another word!</button>
+    </form>
+</div>
