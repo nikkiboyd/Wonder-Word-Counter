@@ -13,23 +13,18 @@ namespace WordCounterMVC.Models
         {
             _wordToCheck = wordToCheck;
             _sentenceToCheck = sentenceToCheck;
-            _occurrences = 100;
+            _occurrences = 0;
         }
 
-        public int GetOccurrences()
+        public int CountOccurrences()
         {
-            return _occurrences;
-        }
-
-        public int CountOccurrences(string userWord, string userSentence)
-        {
-            string[] wordArray = userSentence.Split(new char[] { ' ', '.', ',', ';', ':', '?', '!'});
+            string[] wordArray = _sentenceToCheck.Split(new char[] { ' ', '.', ',', ';', ':', '?', '!'});
             var findMatches = from word in wordArray
-                              where word.ToLower() == userWord.ToLower()
+                              where word.ToLower() == _wordToCheck.ToLower()
                               select word;
             
-            int wordFrequency = findMatches.Count();
-            return wordFrequency;
+            _occurrences = findMatches.Count();
+            return _occurrences;
         }
     }
 }

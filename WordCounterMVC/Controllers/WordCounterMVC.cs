@@ -24,8 +24,8 @@ namespace WordCounterMVC.Controllers
         [HttpPost("/word-counter/result")]
         public ActionResult ShowResult()
         {
-            RepeatCounter newCounter = new RepeatCounter(userWord, userInput);
-            newCounter.CountOccurrences(userWord, userInput);
+            RepeatCounter newCounter = new RepeatCounter((Request.Form["userWord"]), (Request.Form["userSentence"]));
+            int occurrences = newCounter.CountOccurrences();
             return View("Result", newCounter);
         }
     }
