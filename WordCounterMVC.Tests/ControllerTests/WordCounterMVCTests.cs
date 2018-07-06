@@ -25,5 +25,21 @@ namespace WordCounterMVC.Tests.ControllerTests
             var result = counterView.ViewData.Model;
             Assert.IsInstanceOfType(result, typeof(ViewResult));
         }
+
+        [TestMethod]
+        public void Result_ReturnsCorrectView_True()
+        {
+            WordCounterMVCController controller = new WordCounterMVCController();
+            ActionResult resultView = controller.Result();
+            Assert.IsInstanceOfType(resultView, typeof(ViewResult));
+        }
+
+        [TestMethod]
+        public void Result_HasCorrectModelType_True()
+        {
+            ViewResult resultView = new WordCounterMVCController().Result() as ViewResult;
+            var result = resultView.ViewData.Model;
+            Assert.IsInstanceOfType(result, typeof(ViewResult));
+        }
     }
 }
