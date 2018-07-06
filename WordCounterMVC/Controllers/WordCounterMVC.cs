@@ -10,17 +10,24 @@ namespace WordCounterMVC.Controllers
     public class WordCounterMVC : Controller
     {
         [HttpGet("/word-counter")]
-        public IActionResult Counter()
+        public ActionResult Counter()
         {
             return View();
         }
 
+        [HttpGet("/word-counter/result")]
+        public ActionResult Result()
+        {
+            return View();
+        }
+
+
         [HttpPost("/word-counter/result")]
-        public ActionResult Counter(string userWord, string userSentence)
+        public ActionResult Result(string userWord, string userSentence)
         {
             RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
             newCounter.CountOccurrences(userWord, userSentence);
-            return View();
+            return View(newCounter.CountOccurrences(userWord, userSentence));
         }
     }
 }
