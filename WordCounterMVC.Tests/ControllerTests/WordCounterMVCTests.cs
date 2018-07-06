@@ -1,9 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
 using WordCounterMVC.Controllers;
-using WordCounterMVC.Models;
 
 namespace WordCounterMVC.Tests.ControllerTests
 {
