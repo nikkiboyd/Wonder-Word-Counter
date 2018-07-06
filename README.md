@@ -8,6 +8,8 @@
 
 _This program will assist users with counting the frequency of a single word throughout a given sentence or paragraph. The program has been built to account for case sensitivity, all forms of punctuation, pluralization, and an infinite amount of entries. Please stay tuned for the user interface portion of this program shortly!_
 
+![](https://user-images.githubusercontent.com/38386782/42403771-73ca08de-8138-11e8-8a53-4aa878d8e18c.png)
+
 ## Specifications
 
 The program will ask the user which word they would like to check for frequency, and collect that first word.
