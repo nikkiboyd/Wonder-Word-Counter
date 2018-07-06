@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WordCounter;
+using WordCounterMVC.Models;
 
 namespace WordCounterTests
 {
@@ -14,7 +14,7 @@ namespace WordCounterTests
             string userSentence = "the cat is a cat";
             int expectedFrequency = 2;
             RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
-            int result = newCounter.CountOccurences(userWord, userSentence);
+            int result = newCounter.CountOccurrences();
             Assert.AreEqual(expectedFrequency, result);
         }
 
@@ -25,7 +25,7 @@ namespace WordCounterTests
             string userSentence = "Cats are my favorite animal.";
             int expectedFrequency = 0;
             RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
-            int result = newCounter.CountOccurences(userWord, userSentence);
+            int result = newCounter.CountOccurrences();
             Assert.AreEqual(expectedFrequency, result);
         }
 
@@ -36,7 +36,7 @@ namespace WordCounterTests
             string userSentence = "Cat people are my kind of people.";
             int expectedFrequency = 1;
             RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
-            int result = newCounter.CountOccurences(userWord, userSentence);
+            int result = newCounter.CountOccurrences();
             Assert.AreEqual(expectedFrequency, result);
         }
 
@@ -47,7 +47,7 @@ namespace WordCounterTests
             string userSentence = "What a beautiful cat!";
             int expectedFrequency = 1;
             RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
-            int result = newCounter.CountOccurences(userWord, userSentence);
+            int result = newCounter.CountOccurrences();
             Assert.AreEqual(expectedFrequency, result);
         }
 
@@ -58,7 +58,7 @@ namespace WordCounterTests
             string userSentence = "Lorem ipsum dolor sit amet, Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
             int expectedFrequency = 15;
             RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
-            int result = newCounter.CountOccurences(userWord, userSentence);
+            int result = newCounter.CountOccurrences();
             Assert.AreEqual(expectedFrequency, result);
         }
 
@@ -69,7 +69,7 @@ namespace WordCounterTests
             string userSentence = "Watch out for the CAT!";
             int expectedFrequency = 1;
             RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
-            int result = newCounter.CountOccurences(userWord, userSentence);
+            int result = newCounter.CountOccurrences();
             Assert.AreEqual(expectedFrequency, result);
         }
 
@@ -80,7 +80,7 @@ namespace WordCounterTests
             string userSentence = "I ordered some catering.";
             int expectedFrequency = 0;
             RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
-            int result = newCounter.CountOccurences(userWord, userSentence);
+            int result = newCounter.CountOccurrences();
             Assert.AreEqual(expectedFrequency, result);
         }
 
@@ -91,7 +91,7 @@ namespace WordCounterTests
             string userSentence = "My kitty-cat Santa Claws is an alley-cat.";
             int expectedFrequency = 0;
             RepeatCounter newCounter = new RepeatCounter(userWord, userSentence);
-            int result = newCounter.CountOccurences(userWord, userSentence);
+            int result = newCounter.CountOccurrences();
             Assert.AreEqual(expectedFrequency, result);
         }
     }
