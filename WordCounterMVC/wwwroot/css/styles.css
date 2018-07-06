@@ -50,6 +50,7 @@ h1 {
 }
 
 .btn {
+    margin: 5px;
     border-color: #F3C54A;
     background-color: #6192AC;
     font-size: 30px;
@@ -87,4 +88,9 @@ input[type="text"] {
     position: relative;
     text-align: center;
     color: white;
+}
+
+#nav-button {
+    float: right;
+    font-size: 18px;
 }

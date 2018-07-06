@@ -10,6 +10,31 @@
     <script src='~/js/scripts.js'></script>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="/images/Wlogo.png" width="55" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <form action="/" class="form-inline my-2 my-sm-0">
+                        <button id="nav-button" class="btn btn-warning my-2 my-sm-0" type="submit">Home</button>
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <form action="/word-counter" class="form-inline my-2 my-sm-0">
+                        <button id="nav-button" class="btn btn-warning my-2 my-sm-0" type="submit">Play</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+        <form action="https://github.com/nikkiboyd/word-counter" class="form-inline my-2 my-sm-0">
+            <button id="nav-button" class="btn btn-warning my-2 my-sm-0" type="submit">Download Repository</button>
+        </form>
+    </nav>
     @RenderBody()
 </body>
 </html>
