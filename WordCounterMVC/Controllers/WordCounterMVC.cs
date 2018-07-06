@@ -7,7 +7,7 @@ using WordCounterMVC.Models;
 
 namespace WordCounterMVC.Controllers
 {
-    public class WordCounterMVC : Controller
+    public class WordCounterMVCController : Controller
     {
         [HttpGet("/word-counter")]
         public ActionResult Counter()
