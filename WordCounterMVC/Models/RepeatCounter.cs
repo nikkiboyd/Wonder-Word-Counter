@@ -16,6 +16,11 @@ namespace WordCounterMVC.Models
             _occurrences = 0;
         }
 
+        public string GetWord()
+        {
+            return _wordToCheck;
+        }
+
         public int CountOccurrences()
         {
             string[] wordArray = _sentenceToCheck.Split(new char[] { ' ', '.', ',', ';', ':', '?', '!'});
